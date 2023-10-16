@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "NanumBarunpen";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  color: #333;
+  font-family: "NanumBarunpen";
+}
+.inner {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.fp-scroll-mac.fp-viewing-secondPage header {
+  background-color: #333;
+}
+.fp-scroll-mac.fp-viewing-3rdPage header {
+  background-color: #333;
+}
+.fp-scroll-mac.fp-viewing-4 header {
+  background-color: #333;
+}
+.fp-scroll-mac.fp-viewing-5 header {
+  background-color: #333;
+}
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header h1 img {
+  height: 80px;
+}
+.gnb {
+  padding: 0 30px;
+}
+.gnb .depth01 {
+  width: 150px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.gnb .depth01 > a {
+  line-height: 80px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.gnb .depth01 .depth02 {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px #3333331e;
+  font-size: 15px;
+  border-radius: 10px;
+  display: none;
+}
+.gnb .depth01 .depth02 li {
+  padding: 10px 0;
+}
+.gnb .depth01 .depth02 li:hover {
+  background-color: #faa11bad;
+  color: #fff;
+  border-radius: 10px;
+}
+
+header > ul {
+  margin-right: 20px;
+}
+header > ul li {
+  display: inline-block;
+  padding-right: 20px;
+}
+header > ul li img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+#footer {
+  height: auto;
+}
+#footer .text_slide {
+  overflow-x: hidden;
+}
+#footer .text_slide .iamg {
+  white-space: nowrap;
+  animation: text 30s infinite linear;
+  margin-bottom: 30px;
+}
+#footer .text_slide img {
+  padding: 0 10px;
+}
+#footer .text_slide .iamg_1 {
+  white-space: nowrap;
+  animation: text_1 30s infinite linear;
+  margin-bottom: 50px;
+}
+@keyframes text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes text_1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#footer .footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+#footer .footer .inner {
+  text-align: left;
+}
+#footer .footer .inner h1 {
+  margin-bottom: 40px;
+}
+#footer .footer .inner ul li {
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+}
+#footer .footer .inner p {
+  margin-bottom: 20px;
+}
+#fp-nav ul li .fp-tooltip {
+  color: #faa21b;
+  font-weight: bold;
+  font-family: "NanumBarunpen";
+}
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  background-color: #8dc74b;
+}
+/* 마우스 */
+.cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 9999;
+  border-radius: 50%;
+  background-color: #8dc74b94;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s;
+}
+/* ul li:hover ~ .cursor {
+    transform: scale(5);
+} */
+/* 마우스 휠 */
+.scroll-down {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 999999;
+  align-items: center;
+}
+.scroll {
+  width: 2rem;
+  height: 4rem;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll span {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #fff;
+  animation: cursor 1.15s linear infinite;
+}
+.arrow-down {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid transparent;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  transform: rotate(45deg);
+  margin-top: 0.3rem;
+  animation: arrow 1.15s linear infinite;
+}
+@keyframes cursor {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}

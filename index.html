@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸드팩토리</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="lib/dist/fullpage.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="lib/dist/fullpage.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        
+        $(function () {
+            var myFullpage = new fullpage('#fullpage', {
+                //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', '3rdPage'],
+                navigation: true,
+                navigationPosition:'left',
+                navigationTooltips: ['MAIN', '1CUP 1DA','제조과정','How!', 'News!'],
+                showActiveTooltip: true,
+            });
+
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                },
+            });
+
+            $('.gnb > li').mouseover(function () {
+                $(this).find('.depth02').stop().slideDown()
+            }).mouseout(function () {
+                $(this).find('.depth02').stop().slideUp()
+            })
+
+            window.onload = function () {
+            let num1 = document.querySelector('.num1')
+            let num2 = document.querySelector('.num2')
+
+            let mouse = document.querySelector('.cursor')
+            document.onmousemove = function (e) {
+                let mouseX = e.pageX
+                let mouseY = e.pageY
+
+                mouse.style.left = mouseX + 'px'
+                mouse.style.top = mouseY + 'px'
+            }
+            
+        }
+        })//jquery end
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="cursor"></div><!-- .cursor end -->
+        <header>
+            <h1><a href="#"><img src="img/logo.png" alt="로고"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li class="depth01">
+                        <a href="#">회사소개</a>
+                        <ul class="depth02">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">CI/BI소개</a></li>
+                            <li><a href="#">인증서</a></li>
+                            <li><a href="#">주요거래서</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#">제조공정</a>
+                        <ul class="depth02">
+                            <li><a href="#">원물관리</a></li>
+                            <li><a href="#">제조관리</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#">제품소개</a>
+                        <ul class="depth02">
+                            <li><a href="#">소용량 컵과일</a></li>
+                            <li><a href="#">중용량 컵과일</a></li>
+                            <li><a href="#">대용량 컵과일</a></li>
+                            <li><a href="#">과일요거 컵과일</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#">고객지원</a>
+                        <ul class="depth02">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">언론보도</a></li>
+                            <li><a href="#">고객문의</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#">이벤트</a>
+                        <ul class="depth02">
+                            <li><a href="#">진행이벤트</a></li>
+                            <li><a href="#">당첨자 발표</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#">How! 컵과일</a>
+                    </li><!-- .depth01 end -->
+                </ul><!-- .gnb end -->
+            </nav>
+            <ul>
+                <li><a href="#"><img src="img/user.png" alt=""></a></li>
+                <li><a href="#"><img src="img/lang.png" alt=""></a></li>
+            </ul>
+        </header>
+    
+        <div id="fullpage"><!-- 변경x -->
+    
+            <div class="section" id="section0">
+                    <video muted autoplay loop>
+                            <source src="img/main_vod2.mp4" type="video/mp4" />
+                    </video>
+                    <div class="text">
+                        <h1>맛있는 과일<br>
+                            간편하고 안전하게 먹자!</h1>
+                        <div class="btn">
+                        <a href="#">MORE
+                            <img src="img/icons8-화살-48 (9).png" alt="">
+                        </a>
+                        </div>
+                    </div><!-- .text end -->
+                    <!-- 🎃 -->
+                    <a href="#" class="scroll-down">
+                        <div class="scroll">
+                            <span class="scroll-dot"></span>
+                        </div><!-- .scroll end -->
+                        <div class="arrow-down"></div>
+                    </a><!-- .scroll-down end -->
+            </div>
+            <div class="section" id="section1">
+                <div class="inner">
+                <h3>1CUP 1DAY<br/>하루 한컵</h3>
+                <p>하루 한컵, 내 몸의 영양소를 챙겨주는 팩토리!<br>
+                가족을 생각하는 마음으로 깨끗하게, 신선하게 여러분의 영양소를 책임집니다.</p>
+                <div class="list">
+                    <div class="item">
+                        <div>
+                        <h4>한컵으로<br>영양 小</h4>
+                        </div>
+                        <a href="#"><img src="img/1.png" alt=""></a>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <div>
+                        <h4>한컵에 담은<br>영양 충전 中</h4>
+                        </div>
+                        <a href="#"><img src="img/2.png" alt=""></a>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <div>
+                        <h4>한컵에<br>영양 듬뿍 大</h4>
+                        </div>
+                        <a href="#"><img src="img/3.png" alt=""></a>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <div>
+                        <h4>하루한컵<br>과일요거</h4>
+                        </div>
+                        <a href="#"><img src="img/4.png" alt=""></a>
+                    </div><!-- .item end -->
+                </div><!-- .list end -->
+                </div><!-- .inner end -->
+            </div>
+            <div class="section" id="section2">
+                <div class="inner">
+                <h3>제조관리</h3>
+                <p>전체공정 자동화설비 구축<br />HACCP인증 프로세스 적용높은 생산성 유지와 청결·안전한 품질관리</p>
+
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            
+                                <a href="#"><img src="img/5.png" alt=""></a>
+                        
+                            <div>
+                                <span>STEP01</span>
+                                <h4>소독/세척</h4>
+                                <p>과일의 미생물 관리공정으로 소독과 세척 진행</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            
+                                <a href="#"><img src="img/6.png" alt=""></a>
+                            
+                            <div>
+                                <span>STEP02 </span>
+                                <h4>원물 절단</h4>
+                                <p>소독/세척된 원물을 먹기 좋은 크기로 절단</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            
+                                <a href="#"><img src="img/7.png" alt=""></a>
+                          
+                            <div>
+                                <span>STEP03</span> 
+                                <h4>탈수/건조/냉각</h4>
+                                <p>원물을 탈수/건조 후 냉각시켜 줍니다.</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                           
+                                <a href="#"><img src="img/8.png" alt=""></a>
+                            
+                            <div>
+                                <span>STEP04</span>
+                                <h4>계량</h4>
+                                <p>원물에따라 정확히 계량하여 작업합니다.</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                         
+                                <a href="#"><img src="img/9.png" alt=""></a>
+                            
+                            <div>
+                                <span>STEP05</span>
+                                <h4>검출</h4>
+                                <p>과일의 이물관리 공정을 진행합니다.</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                           
+                                <a href="#"><img src="img/10.png" alt=""></a>
+                           
+                            <div>
+                                <span>STEP06</span>
+                                <h4>포장</h4>
+                                <p>고객사에 맞춰 제품 포장을 합니다.</p>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                      </div>
+                      </div><!-- .inner end -->
+            </div>
+            <div class="section" id="section3"> 
+                <div class="inner">
+                <h3>How! 컵과일</h3>
+                <p>과일의 비타민과 영양소가 한 컵에 가득 든 컵과일어떻게 즐길 수 있을까요?</p>
+                <div class="list">
+                    <div class="item">
+                        <h4>Method 01</h4>
+                        <p>무가당 요거트와 함께</p>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <h4>Method 02</h4>
+                        <p>아침식사 대용 토스트와 함께</p>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <h4>Method 03</h4>
+                        <p>커피 및 간단한 디저트와 함께</p>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <h4>Method 04</h4>
+                        <p>식사 후 후식으로 함께</p>
+                    </div><!-- .item end -->
+                </div><!-- .lits end -->
+                </div><!-- .inner end -->
+            </div>
+            <div class="section" id="section4">
+                <div class="inner">
+                    <h3>NEWS</h3>
+                    <p>새로운 소식</p>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <a href="#"><img src="img/11.png" alt=""></a>
+                        </figure>
+                        <p>(주)푸드팩토리, 경북지역 아동 성장 지원 '과일 에이드 키트' 전달</p>
+                        <a href="#">MORE></a>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <figure>
+                            <a href="#"><img src="img/12.png" alt=""></a>
+                        </figure>
+                        <p>김천 아동 위한 통 큰 기부 푸드팩토리, 1억 후원 약정 함성호 씨, 유산기부</p>
+                        <a href="#">MORE></a>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <figure>
+                            <a href="#"><img src="img/13.png" alt=""></a>
+                        </figure>
+                        <p>초록우산어린이재단 경북지역본부, 농업회사법인 ㈜푸드팩토리 지역 아동</p>
+                        <a href="#">MORE></a>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <figure>
+                            <a href="#"><img src="img/14.png" alt=""></a>
+                        </figure>
+                        <p>[2020년 김천시 중소기업 우수제품 홍보책자] 등록</p>
+                        <a href="#">MORE></a>
+                    </div><!-- .item end -->
+                </div><!-- .list end -->
+                </div><!-- .inner -->
+            </div>
+            
+            <footer class="section" id="footer">
+                <div class="text_slide">
+                    <a href="#">
+                        <p class="iamg">
+                        <img src="img/sec03_img_03.png" alt="">
+                        <img src="img/sec03_img_04.png" alt="">
+                        <img src="img/sec03_img_05.png" alt="">
+                        <img src="img/sec03_img_06.png" alt="">
+                        <img src="img/sec03_img_07.png" alt="">
+                        <img src="img/sec03_img_08.png" alt="">
+                        <img src="img/sec03_img_09.png" alt="">
+                        <img src="img/sec03_img_10.png" alt="">
+                        <img src="img/sec03_img_11.png" alt="">
+                        <img src="img/sec03_img_12.png" alt="">
+                        <img src="img/sec03_img_13.png" alt="">
+                        <img src="img/sec03_img_14.png" alt="">
+                        <img src="img/sec03_img_01.png" alt="">
+                        <img src="img/sec03_img_02.png" alt="">
+                        <img src="img/sec03_img_03.png" alt="">
+                        <img src="img/sec03_img_04.png" alt="">
+                        <img src="img/sec03_img_05.png" alt="">
+                        <img src="img/sec03_img_06.png" alt="">
+                        <img src="img/sec03_img_07.png" alt="">
+                        <img src="img/sec03_img_08.png" alt="">
+                        <img src="img/sec03_img_09.png" alt="">
+                        <img src="img/sec03_img_10.png" alt="">
+                        <img src="img/sec03_img_11.png" alt="">
+                        <img src="img/sec03_img_12.png" alt="">
+                        <img src="img/sec03_img_13.png" alt="">
+                        </p>
+                        <p class="iamg_1">
+                        <img src="img/sec03_img_03.png" alt="">
+                        <img src="img/sec03_img_04.png" alt="">
+                        <img src="img/sec03_img_05.png" alt="">
+                        <img src="img/sec03_img_06.png" alt="">
+                        <img src="img/sec03_img_07.png" alt="">
+                        <img src="img/sec03_img_08.png" alt="">
+                        <img src="img/sec03_img_09.png" alt="">
+                        <img src="img/sec03_img_10.png" alt="">
+                        <img src="img/sec03_img_11.png" alt="">
+                        <img src="img/sec03_img_12.png" alt="">
+                        <img src="img/sec03_img_13.png" alt="">
+                        <img src="img/sec03_img_14.png" alt="">
+                        <img src="img/sec03_img_03.png" alt="">
+                        <img src="img/sec03_img_04.png" alt="">
+                        <img src="img/sec03_img_05.png" alt="">
+                        <img src="img/sec03_img_06.png" alt="">
+                        <img src="img/sec03_img_07.png" alt="">
+                        <img src="img/sec03_img_08.png" alt="">
+                        <img src="img/sec03_img_09.png" alt="">
+                        <img src="img/sec03_img_11.png" alt="">
+                        <img src="img/sec03_img_12.png" alt="">
+                        <img src="img/sec03_img_13.png" alt="">
+                        <img src="img/sec03_img_14.png" alt="">
+                        </p>
+                    </a>
+                </div>
+                <div class="footer">
+                <div class="inner">
+                <h1><a href="#"><img src="img/Group 1.png" alt=""></a></h1>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">주문ERP</a></li>
+                </ul>
+                <p>농업회사법인 주식회사 푸드팩토리·대표이사 : 김경민·사업자번호 : 510-81-33410·주소 : 경상북도 김천시 아포읍 덕계길 137·TEL : 054-434-3060·FAX : 054-437-3060</p>
+                <strong>COPYRIGHT ⓒ 2019 FOODFACTORY. ALL RIGHTS RESERVED.</strong>
+                </div>
+                </div>
+            </footer>
+    </div><!-- #wrap end --> 
+</body>
+</html>
